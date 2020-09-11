@@ -2,6 +2,7 @@ function httpRequest(url, data, callback) {
     var xhr = new XMLHttpRequest();
 
     xhr.open("POST", url, true);
+    // 这里需要再open之后
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
     xhr.onreadystatechange = function () {
@@ -30,7 +31,7 @@ function userLogin() {
     httpRequest(url, data, (res) => {
 
         console.log("请求回来")
-        console.log(res)
+        console.log(JSON.parse(res))
     })
 }
 

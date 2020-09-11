@@ -25,7 +25,7 @@ function userLogin(){
     httpRequest(url,data,(res)=>{
        
         console.log("请求回来")
-        console.log(res)
+        console.log(JSON.parse(res))
     })
 }
 

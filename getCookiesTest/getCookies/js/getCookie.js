@@ -18,4 +18,6 @@ function getCookies() {
     });
 }
 
+
+
 document.getElementById("box").onclick = getAllCookies

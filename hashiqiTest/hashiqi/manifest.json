@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "猫咪",
+  "version": "1.0",
+  "description": "猫咪",
+ 
+  "browser_action": {
+      "default_icon": {
+          "19": "img/cat.png"
+      }
+     
+  },
+  "background": {
+      "scripts": [
+          "js/hashiqi.js",
+          "js/vue.js"
+      ]
+     
+  },
+  "content_scripts": [
+    {
+        "matches": [
+          "http://*/*",
+          "https://*/*"
+        ],
+        "js": ["js/hashiqi.js","js/vue.js"]
+    }
+],
+  "permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
